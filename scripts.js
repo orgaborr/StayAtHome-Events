@@ -1,3 +1,12 @@
 $('#button-1').click(() => {
     console.log('Yeah, you clicked me');
 })
+
+$('#button-2').event('click', () => {
+    if($('button-1').text() === 'Button One') {
+        $('#button-1').text('Button text changed!');
+    } else {
+        $('button-1').text('Button One');
+    }
+    
+})
