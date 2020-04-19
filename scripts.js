@@ -11,7 +11,11 @@ $('#button-2').on('click', () => {
     
 });
 
+let changed = false;
 $('#button-3').click(() => {
-    let color = $('#inputField').val();
-    $('button').css('background-color', color);  
+    if(!changed) {
+        let color = $('#inputField').val();
+        $('button').css('background-color', color); 
+        changed = true;
+    }
 })
