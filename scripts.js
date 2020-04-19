@@ -10,3 +10,16 @@ $('#button-2').on('click', () => {
     }
     
 });
+
+let toggle = false;
+$('#button-3').click(() => {
+    if(toggle === false) {
+        $('#button-1').css('background-color', 'red');
+        $('#button-2').css('background-color', 'blue');
+        $('#button-3').css('background-color', 'green');
+        toggle = true;
+    } else {
+        $('button').removeAttr('style');
+        toggle = false;
+    }
+})
